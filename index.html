@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--normlze-->
+    <link rel="stylesheet" href="css/normlize.css" />
+    <!-- font awsome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>QR-Reader</title>
+  </head>
+  <body>
+    <header>
+      <button class="statMood"><i class="fa-solid fa-sun"></i></button>
+    </header>
+    <main>
+      <h1>Smart QR Code</h1>
+      <div class="container">
+        <section class="QR-preview">
+          <div class="QR-code"></div>
+          <div class="QR-actions">
+            <button class="downloadBTN">
+              <i class="fa-solid fa-download"></i>
+              <h3>download</h3>
+            </button>
+            <button class="shareBTN">
+              <i class="fa-solid fa-share-nodes"></i>
+              <h3>share</h3>
+            </button>
+          </div>
+          <h4>preview updates in real-time</h4>
+        </section>
+        <section class="QR-input-section">
+          <div class="switch-type-section">
+            <h3>content type</h3>
+            <select name="QR-type" id="QRType">
+              <option value="sms">sms</option>
+              <option value="text">text</option>
+              <option value="url">url</option>
+              <option value="phone">phone</option>
+              <option value="email">email</option>
+              <option value="wi-fi">wi-fi</option>
+              <option value="vcard">vcard</option>
+              <option value="img">img</option>
+            </select>
+          </div>
+          <div class="QR-color">
+            <div class="QR-btn-color">
+              <label for="darkcolor">Foreground Color</label>
+              <input type="color" id="darkcolor" />
+            </div>
+            <div class="QR-btn-color">
+              <label for="whitecolor">Background Color</label>
+              <input type="color" id="whitecolor" />
+            </div>
+          </div>
+          <div class="QR-size">
+            <label for="QRsize" class="Size-label"
+              >QR Size (
+              <span id="QRsize-value">250</span>
+              PX)</label
+            >
+            <input
+              type="range"
+              name="QR-size"
+              id="QRsize"
+              min="100"
+              max="500"
+              value="250"
+            />
+          </div>
+          <div class="QR-input-filds">
+            <textarea
+              name="QR-text"
+              id="QRText"
+              placeholder="inter you're text here"
+            ></textarea>
+          </div>
+          <button class="generateQR-btn">Generate QR code</button>
+        </section>
+      </div>
+      <section class="upload-section">
+        <label for="imgUploading">upload section</label>
+        <div class="upload-img">
+          <input type="file" accept="img/*" id="imgUploading" hidden />
+          <p>
+            Drag & Drop image here or <strong>click to Upload</strong> to
+            Extract Text(OCR)
+          </p>
+          <div id="img-loading" class="loading">
+            <div class="loader"></div>
+            <span class="loadingtext">Extracting text...</span>
+          </div>
+        </div>
+      </section>
+      <section class="download-section">
+        <h1 class="hist-title">History</h1>
+        <ul class="history-list">
+          <li class="history-carde">
+            <div class="carde-src">
+              <div class="smal-QR"></div>
+              <div class="carde-deatails">
+                <p><strong>[URL] </strong> https:\\mostafa-kamal</p>
+                <p>
+                  <strong>Date:</strong> 2023-08-10
+                  <strong>Time:</strong> 15:30:00
+                </p>
+              </div>
+            </div>
+            <div class="carde-options">
+              <button class="hist-regenerateBTN">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>Regenerate</span>
+              </button>
+              <button class="hist-downloadBTN">
+                <i class="fa-solid fa-download"></i>
+                <span>Download</span>
+              </button>
+              <button class="hist-deletBTN">
+                <i class="fa-solid fa-trash"></i>
+                <span>Delete</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
