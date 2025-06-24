@@ -9,7 +9,7 @@
     <!-- font awsome -->
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-white.css" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,7 +49,7 @@
               <option value="url">url</option>
               <option value="phone">phone</option>
               <option value="email">email</option>
-              <option value="wi-fi">wi-fi</option>
+              <option value="wifi">wi-fi</option>
               <option value="vcard">vcard</option>
               <option value="img">img</option>
             </select>
@@ -80,11 +80,75 @@
             />
           </div>
           <div class="QR-input-filds">
-            <textarea
-              name="QR-text"
-              id="QRText"
-              placeholder="inter you're text here"
-            ></textarea>
+            <div class="input-fild sms">
+              <textarea
+                name="QR-text"
+                id="QRText"
+                placeholder="inter you're text here"
+              ></textarea>
+            </div>
+            <div class="input-fild text">
+              <input type="text" placeholder="inter you're text" />
+            </div>
+            <div class="input-fild email">
+              <h3>Email Address</h3>
+              <input
+                type="email"
+                class="email-address"
+                placeholder="your@exmple.com"
+              />
+              <h3>Subject</h3>
+              <input
+                type="text"
+                class="Subject"
+                placeholder="Subject of email"
+              />
+              <h3>Body</h3>
+              <textarea
+                name="body-email"
+                id="email-body"
+                placeholder="Email vody content"
+              ></textarea>
+            </div>
+            <div class="input-fild url">
+              <input type="url" placeholder="Enter your URL" />
+            </div>
+            <div class="input-fild vcard">
+              <h3>Full Name</h3>
+              <input type="text" placeholder="Mostafa Kamal" />
+              <h3>Organization</h3>
+              <input type="text" placeholder="Acme Corp" />
+              <h3>Title</h3>
+              <input type="text" placeholder="Web developement" />
+              <h3>Phone</h3>
+              <input type="number" max="11" placeholder="+1234567890" />
+              <h3>Email</h3>
+              <input type="email" placeholder="your@example.com" />
+              <h3>Website</h3>
+              <input type="url" placeholder="https://example.com" />
+            </div>
+            <div class="input-fild phone">
+              <input type="number" placeholder="+1234567890" />
+            </div>
+            <div class="input-fild wifi">
+              <h3>SSID</h3>
+              <input type="text" placeholder="wi-fi NEtwork Name" />
+              <h3>Password</h3>
+              <input type="text" placeholder="wi-fi Password" />
+              <h3>Encryption</h3>
+              <div class="slectio-wifi">
+                <select>
+                  <option value="none">none</option>
+                  <option value="wep">WEP</option>
+                  <option value="WPA">WPA</option>
+                  <option value="EAP">802.1xEAP</option>
+                  <option value="WAPI PSK">WAPI PSK</option>
+                  <option value="WAPI CERT">WAPI CERT</option>
+                  <option value="WPA3">WPA3 OWE</option>
+                  <option value="WPA3-PERSONAL">WPA3-PESONAL</option>
+                </select>
+              </div>
+            </div>
           </div>
           <button class="generateQR-btn">Generate QR code</button>
         </section>
@@ -103,10 +167,10 @@
           </div>
         </div>
       </section>
-      <section class="download-section">
+      <section class="history-section">
         <h1 class="hist-title">History</h1>
         <ul class="history-list">
-          <li class="history-carde">
+          <!-- <li class="history-carde">
             <div class="carde-src">
               <div class="smal-QR"></div>
               <div class="carde-deatails">
@@ -131,10 +195,12 @@
                 <span>Delete</span>
               </button>
             </div>
-          </li>
+          </li> -->
         </ul>
       </section>
     </main>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

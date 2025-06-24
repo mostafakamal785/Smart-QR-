@@ -2,22 +2,22 @@
 :root {
   --primary-green: #0ca840;
   --accent-green: #43a047;
-  --light-bg: #ffffff;
+  --light-bg: #1c201f;
   --light-text: #000000;
   --light-secondary-text: #707070;
   --dark-bg: #1a202c; /* Equivalent to gray-900 */
   --dark-card-bg: #2d3748; /* Equivalent to gray-800 */
   --dark-text: #e2e8f0; /* Equivalent to gray-200 */
   --dark-secondary-text: #a0aec0; /* Equivalent to gray-500 */
-  --back-color: #ccf9e2;
+  --back-color: #242b27;
   --card-bg: #e6ffe9;
-  --dark-mood-head: #2d3748;
-  --dark-mood-text: #e2e8f0;
+  --dark-mood-head: #e2e8f0;
+  --dark-mood-text: #2d3748;
   --title-color: #1a202c;
   --button-color: #e8ffff;
   --back-button-color: #0ca840;
-  --border-color: #707070;
-  --filds-ground-color: #d1fae5;
+  --border-color: #ffffff;
+  --filds-ground-color: #2a302d;
   --btn-carde-color: #d1fae5;
   --btn-text-carde-color: #2d3748;
 }
@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 150px;
 }
 header {
@@ -215,6 +215,76 @@ main h1 {
 }
 
 /* end QR-input-section */
+/* start QR-filds */
+
+.input-fild.sms {
+  display: block;
+}
+.input-fild.vcard {
+  display: none;
+}
+.input-fild.text {
+  display: none;
+}
+.input-fild.email {
+  display: none;
+}
+.input-fild.url {
+  display: none;
+}
+.input-fild.phone {
+  display: none;
+}
+.input-fild.wi-fi {
+  display: none;
+}
+.input-fild textarea {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  text-align: left;
+  background-color: var(--filds-ground-color);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.input-fild h3 {
+  font-size: 1rem;
+  color: var(--dark-bg);
+  font-weight: 600;
+  text-align: left;
+}
+.input-fild input {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  text-align: left;
+  background-color: var(--filds-ground-color);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.input-fild select {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-bg);
+  text-align: left;
+  text-transform: uppercase;
+  background-color: var(--filds-ground-color);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+/* end QR-filds */
 /* start upload-sction */
 .upload-section {
   display: flex;
@@ -244,8 +314,14 @@ main h1 {
   position: absolute;
   opacity: 0;
 }
+
 /* end upload-section */
 /* start history section */
+.history-section {
+  border: 0.5px solid var(--back-color);
+  margin-top: 10px;
+}
+
 .history-carde {
   display: flex;
   flex-direction: column;
