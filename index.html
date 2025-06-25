@@ -21,7 +21,9 @@
   </head>
   <body>
     <header>
-      <button class="statMood"><i class="fa-solid fa-sun"></i></button>
+      <div class="light-and-dark">
+        <button class="statMood"><i class="fa-solid fa-sun"></i></button>
+      </div>
     </header>
     <main>
       <h1>Smart QR Code</h1>
@@ -49,19 +51,18 @@
               <option value="url">url</option>
               <option value="phone">phone</option>
               <option value="email">email</option>
-              <option value="wifi">wi-fi</option>
+              <option value="wifi">wifi</option>
               <option value="vcard">vcard</option>
-              <option value="img">img</option>
             </select>
           </div>
           <div class="QR-color">
             <div class="QR-btn-color">
               <label for="darkcolor">Foreground Color</label>
-              <input type="color" id="darkcolor" />
+              <input type="color" id="darkcolor" value="#000000" />
             </div>
             <div class="QR-btn-color">
               <label for="whitecolor">Background Color</label>
-              <input type="color" id="whitecolor" />
+              <input type="color" id="whitecolor" value="#ffffff" />
             </div>
           </div>
           <div class="QR-size">
@@ -199,7 +200,6 @@
         </ul>
       </section>
     </main>
-    <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="index.js"></script>
   </body>
