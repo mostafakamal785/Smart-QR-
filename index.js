@@ -6,7 +6,6 @@ const darkColorInput = document.getElementById("darkcolor");
 const whiteColorInput = document.getElementById("whitecolor");
 const generateBtn = document.querySelector(".generateQR-btn");
 const qrTypeSelector = document.getElementById("QRType");
-
 // مدخلات المحتوى
 const inputFields = document.querySelectorAll(".input-fild");
 const smsField = document.querySelector(".sms textarea");
@@ -45,6 +44,27 @@ const loadingBox = document.querySelector(".loading");
 
 // الهيستوري
 const historyList = document.querySelector(".history-list");
+
+const toggleModeBtn = document.querySelector(".statMood");
+
+toggleModeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // حفظ الوضع في localStorage
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// عند تحميل الصفحة: نتحقق من الوضع المحفوظ
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+});
 
 qrTypeSelector.addEventListener("change", () => {
   inputFields.forEach((input) => {
@@ -250,8 +270,12 @@ generateBtn.addEventListener("click", () => {
       break;
   }
 });
-qrSize.addEventListener("input", (e) => {
-  qrSizeValue.textContent = e.target.value;
+qrSize.addEventListener("input", () => {
+  qrSizeValue.textContent = qrSize.value;
+
+  // أعد توليد QR بالحجم الجديد
+  const value = getCurrentContent(); // ← دالة بسيطة تعيد المحتوى الحالي فقط
+  if (value) generatQrsample(value);
 });
 
 const downloadBtn = document.querySelector(".downloadBTN");

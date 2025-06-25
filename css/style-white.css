@@ -27,7 +27,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   margin-bottom: 150px;
 }
 header {
@@ -53,6 +52,7 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 5px;
+  margin: 60px;
 }
 main h1 {
   color: var(--title-color);
@@ -384,3 +384,83 @@ main h1 {
   cursor: pointer;
 }
 /* end history section */
+/* star respons */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  main {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .QR-preview,
+  .QR-input-section {
+    width: 100%;
+    min-width: auto;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+
+  .QR-actions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .QR-preview .QR-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .QR-input-section .QR-color {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .QR-input-section .QR-color .QR-btn-color input {
+    width: 100%;
+  }
+
+  .carde-src,
+  .carde-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header button {
+    right: 10px;
+    top: 10px;
+  }
+
+  .history-carde {
+    padding: 15px;
+  }
+}
+
+/* end */
+body.dark-mode {
+  --primary-green: #0ca840;
+  --accent-green: #43a047;
+  --light-bg: #1c201f;
+  --light-text: #000000;
+  --light-secondary-text: #707070;
+  --dark-bg: #1a202c; /* Equivalent to gray-900 */
+  --dark-card-bg: #2d3748; /* Equivalent to gray-800 */
+  --dark-text: #e2e8f0; /* Equivalent to gray-200 */
+  --dark-secondary-text: #a0aec0; /* Equivalent to gray-500 */
+  --back-color: #242b27;
+  --card-bg: #e6ffe9;
+  --dark-mood-head: #e2e8f0;
+  --dark-mood-text: #2d3748;
+  --title-color: #1a202c;
+  --button-color: #e8ffff;
+  --back-button-color: #0ca840;
+  --border-color: #ffffff;
+  --filds-ground-color: #2a302d;
+  --btn-carde-color: #d1fae5;
+  --btn-text-carde-color: #2d3748;
+}
