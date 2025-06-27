@@ -61,8 +61,8 @@ main h1 {
   margin: 20px;
   text-align: center;
 }
-/* start QR-preview */
-.QR-code {
+/* start qrPreview */
+.qrCode {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,20 +74,20 @@ main h1 {
   flex-direction: row;
   gap: 30px;
 }
-.QR-preview {
+.qrPreview {
   padding: 20px;
   border-radius: 5px;
   border: 0.5px solid var(--back-color);
   min-width: 300px;
   padding: 50px;
 }
-.QR-preview .QR-code {
+.qrPreview .qrCode {
   min-width: 100px;
   min-height: 100px;
   position: relative;
   border-radius: 5px;
 }
-.QR-preview .QR-code::after {
+.qrPreview .qrCode::after {
   content: "Enter content to genrate QR cod";
   position: absolute;
   top: 50%;
@@ -108,17 +108,17 @@ main h1 {
 }
 
 /* New CSS to hide the ::after content when a QR code is present */
-.QR-preview .QR-code.has-QR-code::after {
+.qrPreview .qrCode.hasQrCode::after {
   opacity: 0;
   pointer-events: none;
 }
-.QR-actions {
+.qrActions {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0px 20px 0px;
 }
-.QR-preview .QR-actions button {
+.qrPreview .qrActions button {
   border: none;
   display: flex;
   justify-content: space-between;
@@ -132,31 +132,31 @@ main h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.QR-preview .QR-actions button i {
+.qrPreview .qrActions button i {
   font-size: 1.2rem;
   color: var(--back-color);
 }
-.QR-preview h4 {
+.qrPreview h4 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--dark-bg);
   text-align: center;
 }
-/* end QR-preview */
-/* start QR-input-section */
-.QR-input-section {
+/* end qrPreview */
+/* start qrInputSection */
+.qrInputSection {
   padding: 20px;
   border: 0.5px solid var(--back-color);
   border-radius: 5px;
   min-width: 300px;
 }
-.QR-input-section .switch-type-section {
+.qrInputSection .switchTypeSection {
   display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
 }
-.QR-input-section .switch-type-section select {
+.qrInputSection .switchTypeSection select {
   width: 100%;
   height: 40px;
   border: none;
@@ -170,7 +170,7 @@ main h1 {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
-.QR-input-section .QR-color {
+.qrInputSection .qrColor {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -178,11 +178,11 @@ main h1 {
   gap: 15px;
 }
 
-.QR-input-section .QR-color .QR-btn-color {
+.qrInputSection .qrColor .qrBtnColor {
   display: flex;
   flex-direction: column;
 }
-.QR-input-section .QR-color .QR-btn-color input {
+.qrInputSection .qrColor .qrBtnColor input {
   width: 100%;
   height: 40px;
   border: none;
@@ -192,29 +192,29 @@ main h1 {
   padding: 5px;
   margin-top: 10px;
 }
-.QR-input-section .QR-color .QR-btn-color label {
+.qrInputSection .qrColor .qrBtnColor label {
   font-size: 1rem;
   color: var(--dark-bg);
   text-align: left;
   margin-top: 10px;
 }
-.QR-input-section .QR-size {
+.qrInputSection .qrSize {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px 0px 20px 0px;
 }
-.QR-input-section .QR-size label {
+.qrInputSection .qrSize label {
   font-size: 1rem;
   color: var(--dark-bg);
   font-weight: 600;
   text-align: left;
   margin-top: 10px;
 }
-.QR-input-section .QR-size input {
+.qrInputSection .qrSize input {
   width: 100%;
 }
-.QR-input-section .generateQR-btn {
+.qrInputSection .generateQrBtn {
   border: none;
   align-items: center;
   border-radius: 20px;
@@ -229,31 +229,31 @@ main h1 {
   cursor: pointer;
 }
 
-/* end QR-input-section */
-/* start QR-filds */
+/* end qrInputSection */
+/* start qrFilds */
 
-.input-fild.sms {
+.inputFild.sms {
   display: block;
 }
-.input-fild.vcard {
+.inputFild.vcard {
   display: none;
 }
-.input-fild.text {
+.inputFild.text {
   display: none;
 }
-.input-fild.email {
+.inputFild.email {
   display: none;
 }
-.input-fild.url {
+.inputFild.url {
   display: none;
 }
-.input-fild.phone {
+.inputFild.phone {
   display: none;
 }
-.input-fild.wifi {
+.inputFild.wifi {
   display: none;
 }
-.input-fild textarea {
+.inputFild textarea {
   width: 100%;
   height: 60px;
   border: none;
@@ -267,13 +267,13 @@ main h1 {
   padding: 10px;
 }
 
-.input-fild h3 {
+.inputFild h3 {
   font-size: 1rem;
   color: var(--dark-bg);
   font-weight: 600;
   text-align: left;
 }
-.input-fild input {
+.inputFild input {
   width: 100%;
   border: none;
   border-radius: 5px;
@@ -285,7 +285,7 @@ main h1 {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
-.input-fild select {
+.inputFild select {
   width: 100%;
   height: 40px;
   border: none;
@@ -299,9 +299,9 @@ main h1 {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
-/* end QR-filds */
-/* start upload-sction */
-.upload-section {
+/* end qrFilds */
+/* start uploadSction */
+.uploadSection {
   display: none;
   align-items: center;
   flex-direction: column;
@@ -310,11 +310,11 @@ main h1 {
   border-radius: 5px;
   margin-top: 20px;
 }
-.upload-section label {
+.uploadSection label {
   font-weight: 600;
 }
 
-.upload-section .upload-img {
+.uploadSection .uploadImg {
   position: relative;
   display: flex;
   align-items: center;
@@ -325,23 +325,23 @@ main h1 {
   margin-top: 10px;
   cursor: pointer;
 }
-.upload-section .upload-img .loading {
+.uploadSection .uploadImg .loading {
   position: absolute;
   opacity: 0;
 }
 
 /* end upload-section */
 /* start history section */
-.history-section {
+.historySection {
   margin-top: 10px;
 }
-.history-list {
+.historyList {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px 0px 20px 0px;
 }
-.history-carde {
+.historyCard {
   display: flex;
   flex-direction: column;
   background: #707070;
@@ -349,27 +349,27 @@ main h1 {
   gap: 20px;
   border-radius: 10px;
 }
-.history-carde .smal-QR {
+.historyCard .smalQr {
   width: 100px;
   height: 100px;
   position: relative;
   border-radius: 5px;
 }
-.history-carde .smal-QR img {
+.historyCard .smalQr img {
   width: 100px;
   height: 100px;
   border-radius: 5px;
 }
-.carde-src {
+.cardSrc {
   display: flex;
   flex-direction: row;
   gap: 50px;
 }
-.carde-options {
+.cardOptions {
   display: flex;
   gap: 50px;
 }
-.carde-options button {
+.cardOptions button {
   border: none;
   display: flex;
   justify-content: space-between;
@@ -385,7 +385,7 @@ main h1 {
 }
 /* end history section */
 /* star respons */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -397,36 +397,36 @@ main h1 {
     padding: 15px;
   }
 
-  .QR-preview,
-  .QR-input-section {
+  .qrPreview,
+  .qrInputSection {
     width: 100%;
     min-width: auto;
     padding: 20px 10px;
     box-sizing: border-box;
   }
 
-  .QR-actions {
+  .qrActions {
     flex-direction: column;
     gap: 10px;
     align-items: center;
   }
 
-  .QR-preview .QR-actions button {
+  .qrPreview .qrActions button {
     width: 100%;
     justify-content: center;
   }
 
-  .QR-input-section .QR-color {
+  .qrInputSection .qrColor {
     flex-direction: column;
     gap: 10px;
   }
 
-  .QR-input-section .QR-color .QR-btn-color input {
+  .qrInputSection .qrColor .qrBtnColor input {
     width: 100%;
   }
 
-  .carde-src,
-  .carde-options {
+  .cardSrc,
+  .cardOptions {
     flex-direction: column;
     gap: 10px;
   }
@@ -436,13 +436,13 @@ main h1 {
     top: 10px;
   }
 
-  .history-carde {
+  .historyCard {
     padding: 15px;
   }
 }
 
 /* end */
-body.dark-mode {
+body.darkMode {
   --primary-green: #0ca840;
   --accent-green: #43a047;
   --light-bg: #1c201f;

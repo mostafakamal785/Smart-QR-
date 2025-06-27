@@ -9,7 +9,12 @@
     <!-- font awsome -->
     <link rel="stylesheet" href="css/all.min.css" />
     <!-- main css -->
-    <link class="statlink" rel="stylesheet" href="css/style-white.css" />
+    <link class="statLink" rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,31 +26,31 @@
   </head>
   <body>
     <header>
-      <div class="light-and-dark">
+      <div class="lightAndDark">
         <button class="statMood"><i class="fa-solid fa-sun"></i></button>
       </div>
     </header>
     <main>
       <h1>Smart QR Code</h1>
       <div class="container">
-        <section class="QR-preview">
-          <div class="QR-code"></div>
-          <div class="QR-actions">
-            <button class="downloadBTN">
+        <section class="qrPreview">
+          <div class="qrCode"></div>
+          <div class="qrActions">
+            <button class="downloadBtn">
               <i class="fa-solid fa-download"></i>
               <h3>download</h3>
             </button>
-            <button class="shareBTN">
+            <button class="shareBtn">
               <i class="fa-solid fa-share-nodes"></i>
               <h3>share</h3>
             </button>
           </div>
           <h4>preview updates in real-time</h4>
         </section>
-        <section class="QR-input-section">
-          <div class="switch-type-section">
+        <section class="qrInputSection">
+          <div class="switchTypeSection">
             <h3>content type</h3>
-            <select name="QR-type" id="QRType">
+            <select name="qr-type" id="qrType">
               <option value="sms">sms</option>
               <option value="text">text</option>
               <option value="url">url</option>
@@ -55,66 +60,66 @@
               <option value="vcard">vcard</option>
             </select>
           </div>
-          <div class="QR-color">
-            <div class="QR-btn-color">
-              <label for="darkcolor">Foreground Color</label>
-              <input type="color" id="darkcolor" value="#000000" />
+          <div class="qrColor">
+            <div class="qrBtnColor">
+              <label for="darkColor">Foreground Color</label>
+              <input type="color" id="darkColor" value="#000000" />
             </div>
-            <div class="QR-btn-color">
-              <label for="whitecolor">Background Color</label>
-              <input type="color" id="whitecolor" value="#ffffff" />
+            <div class="qrBtnColor">
+              <label for="whiteColor">Background Color</label>
+              <input type="color" id="whiteColor" value="#ffffff" />
             </div>
           </div>
-          <div class="QR-size">
-            <label for="QRsize" class="Size-label"
+          <div class="qrSize">
+            <label for="qrSize" class="sizeLabel"
               >QR Size (
-              <span id="QRsize-value">250</span>
+              <span id="qrSizeValue">250</span>
               PX)</label
             >
             <input
               type="range"
-              name="QR-size"
-              id="QRsize"
+              name="qr-size"
+              id="qrSize"
               min="100"
               max="500"
               value="250"
             />
           </div>
-          <div class="QR-input-filds">
-            <div class="input-fild sms">
+          <div class="qrInputFilds">
+            <div class="inputFild sms">
               <textarea
-                name="QR-text"
-                id="QRText"
+                name="qr-text"
+                id="qrText"
                 placeholder="inter you're text here"
               ></textarea>
             </div>
-            <div class="input-fild text">
+            <div class="inputFild text">
               <input type="text" placeholder="inter you're text" />
             </div>
-            <div class="input-fild email">
+            <div class="inputFild email">
               <h3>Email Address</h3>
               <input
                 type="email"
-                class="email-address"
+                class="emailAddress"
                 placeholder="your@exmple.com"
               />
               <h3>Subject</h3>
               <input
                 type="text"
-                class="Subject"
+                class="subject"
                 placeholder="Subject of email"
               />
               <h3>Body</h3>
               <textarea
                 name="body-email"
-                id="email-body"
+                id="emailBody"
                 placeholder="Email vody content"
               ></textarea>
             </div>
-            <div class="input-fild url">
+            <div class="inputFild url">
               <input type="url" placeholder="Enter your URL" />
             </div>
-            <div class="input-fild vcard">
+            <div class="inputFild vcard">
               <h3>Full Name</h3>
               <input type="text" placeholder="Mostafa Kamal" />
               <h3>Organization</h3>
@@ -128,10 +133,10 @@
               <h3>Website</h3>
               <input type="url" placeholder="https://example.com" />
             </div>
-            <div class="input-fild phone">
+            <div class="inputFild phone">
               <input type="number" placeholder="+1234567890" />
             </div>
-            <div class="input-fild wifi">
+            <div class="inputFild wifi">
               <h3>SSID</h3>
               <input type="text" placeholder="wi-fi NEtwork Name" />
               <h3>Password</h3>
@@ -151,12 +156,12 @@
               </div>
             </div>
           </div>
-          <button class="generateQR-btn">Generate QR code</button>
+          <button class="generateQrBtn">Generate QR code</button>
         </section>
       </div>
-      <section class="upload-section">
+      <section class="uploadSection">
         <label for="imgUploading">upload section</label>
-        <div class="upload-img">
+        <div class="uploadImg">
           <input type="file" accept="img/*" id="imgUploading" hidden />
           <p>
             Drag & Drop image here or <strong>click to Upload</strong> to
@@ -168,13 +173,13 @@
           </div>
         </div>
       </section>
-      <section class="history-section">
-        <h1 class="hist-title">History</h1>
-        <ul class="history-list">
-          <!-- <li class="history-carde">
-            <div class="carde-src">
-              <div class="smal-QR"></div>
-              <div class="carde-deatails">
+      <section class="historySection">
+        <h1 class="histTitle">History</h1>
+        <ul class="historyList">
+          <!-- <li class="historyCard">
+            <div class="cardSrc">
+              <div class="smalQr"></div>
+              <div class="cardDeatails">
                 <p><strong>[URL] </strong> https:\\mostafa-kamal</p>
                 <p>
                   <strong>Date:</strong> 2023-08-10
@@ -182,16 +187,16 @@
                 </p>
               </div>
             </div>
-            <div class="carde-options">
-              <button class="hist-regenerateBTN">
+            <div class="cardOptions">
+              <button class="histRegenerateBtn">
                 <i class="fa-solid fa-arrows-rotate"></i>
                 <span>Regenerate</span>
               </button>
-              <button class="hist-downloadBTN">
+              <button class="histDownloadBtn">
                 <i class="fa-solid fa-download"></i>
                 <span>Download</span>
               </button>
-              <button class="hist-deletBTN">
+              <button class="histDeletBtn">
                 <i class="fa-solid fa-trash"></i>
                 <span>Delete</span>
               </button>
@@ -200,7 +205,7 @@
         </ul>
       </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="index.js"></script>
+    <script src="js/qrcode.min.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
