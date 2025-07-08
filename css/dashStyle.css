@@ -56,7 +56,126 @@ body {
   font-family: "Cairo", sans-serif;
   background-color: var(--secondary-color);
   color: var(--text-color);
+  max-width: 450px;
+  margin: 10px auto;
 }
+
+/* header */
+header {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  width: 95%;
+}
+
+header .upS {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  height: 50%;
+}
+header .upS .logoH {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+}
+@media (max-width: 426px) {
+  header .upS .logoH {
+    width: 30%;
+  }
+  header .upS .logoH h1 {
+    font-size: var(---font-size-md);
+  }
+  header .upS .userH h2 {
+    font-size: var(--font-size-sm);
+  }
+}
+header .upS .logoH img {
+  margin-top: var(--spacing-md);
+  width: 70px;
+  height: 70px;
+}
+header .upS .logoH h1 {
+  font-size: var(--page-socendry-font);
+  margin-bottom: var(--spacing-md);
+}
+header .upS .userH {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--spacing-xl);
+  width: 30%;
+  gap: 10px;
+}
+header .upS .userH h2 {
+  font-size: var(--font-size-xl);
+}
+
+header .upS .userH img {
+  object-fit: cover;
+  border-radius: 50%;
+  clip-path: circle(50%);
+  -webkit-clip-path: circle(50%);
+  width: 50px;
+  height: 50px;
+}
+header .upS i {
+  font-size: var(--font-size-xl);
+  margin-top: var(--spacing-xl);
+  cursor: pointer;
+  margin-right: 15px;
+  align-items: center;
+}
+header .downS {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  height: 50%;
+}
+header .downS .dashSearch {
+  position: relative;
+  height: 30px;
+}
+header .downS input {
+  width: 80%;
+  height: 100%;
+  padding: 0 30px;
+  border-radius: var(--input-border-radius);
+  border: 1px solid var(--border-color);
+  text-emphasis-color: var(--text-color);
+}
+header .downS .fa-magnifying-glass {
+  position: absolute;
+  top: 54%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: var(--text-light-color);
+}
+header .downS h6 {
+  font-size: var(--font-size-xl);
+  padding: 20px;
+  width: 30%;
+}
+header .downS .fa-user {
+  height: 30px;
+  width: 30px;
+  background-color: #4caf50;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: var(--white-color);
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+/* header */
 main {
   display: flex;
   flex-direction: column;
@@ -65,71 +184,4 @@ main {
   background-color: var(--secondary-color);
   width: 95%;
   margin: 0 auto;
-}
-.logo {
-  margin-top: var(--spacing-3xl);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.logo h1 {
-  font-size: var(--page-title-font);
-  margin-bottom: var(--spacing-md);
-}
-.logo img {
-  width: var(--avatar-sm);
-}
-#nameFilde {
-  width: 80%;
-  height: var(--input-height);
-  font-size: var(--font-size-md);
-  padding: 0 var(--spacing-xs);
-  border: 1px solid var(--border-color);
-  border-radius: var(--input-border-radius);
-  outline: none;
-  margin-top: var(--spacing-md);
-}
-.avatars {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: var(--spacing-2xl);
-  padding: var(--spacing-md);
-}
-.avatar {
-  width: 20%;
-  height: 20%;
-  object-fit: cover;
-  border-radius: 50%;
-  clip-path: circle(50%);
-  -webkit-clip-path: circle(50%);
-  cursor: pointer;
-  transition: border var(--transition-speed) var(--transition-ease);
-}
-.avatar.active {
-  border: 4px solid var(--primary-color);
-  box-shadow: var(--box-shadow-light);
-}
-.startLink {
-  width: 100%;
-  text-align: center;
-}
-#logInBtn {
-  width: 60%;
-  height: var(--button-height);
-  font-size: var(--font-size-md);
-  padding: 0 var(--spacing-xs);
-  border: 1px solid var(--border-color);
-  border-radius: 40px;
-  outline: none;
-  margin-top: var(--spacing-md);
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  box-shadow: var(--box-shadow-md);
-  cursor: pointer;
-  transition: background-color var(--transition-speed) var(--transition-ease);
-}
-#logInBtn:hover {
-  background-color: var(--primary-dark-color);
 }
